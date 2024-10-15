@@ -7,31 +7,6 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "agent"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "langchain-anthropic" },
-    { name = "langgraph" },
-    { name = "python-dotenv" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "langchain-anthropic", specifier = ">=0.2.3" },
-    { name = "langgraph", specifier = ">=0.2.38" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-]
-
-[package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.6.9" }]
-
-[[package]]
 name = "annotated-types"
 version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -492,6 +467,31 @@ sdist = { url = "https://files.pythonhosted.org/packages/51/65/50db4dda066951078
 wheels = [
     { url = "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124", size = 53985 },
 ]
+
+[[package]]
+name = "py-agent"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "langchain-anthropic" },
+    { name = "langgraph" },
+    { name = "python-dotenv" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "langchain-anthropic", specifier = ">=0.2.3" },
+    { name = "langgraph", specifier = ">=0.2.38" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.6.9" }]
 
 [[package]]
 name = "pydantic"

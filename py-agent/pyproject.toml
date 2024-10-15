@@ -1,5 +1,5 @@
 [project]
-name = "agent"
+name = "py-agent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -15,13 +15,13 @@ authors = [
 license = { text = "MIT" }
 
 
-[project.scripts]
-agent = "agent:main"
-
 [tool.uv]
 dev-dependencies = [
     "ruff>=0.6.9",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent/open-canvas", "src/agent/reflection"]
 
 
 
@@ -48,10 +48,6 @@ lint.ignore = [
 "tests/*" = ["D", "UP"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/open-canvas", "src/reflection"]
-
 
 
 [build-system]

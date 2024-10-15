@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "langchain-anthropic>=0.2.3",
     "langgraph>=0.2.38",
     "python-dotenv>=1.0.1",
 ]
@@ -21,6 +22,7 @@ agent = "agent:main"
 dev-dependencies = [
     "ruff>=0.6.9",
 ]
+
 
 
 [tool.ruff]
@@ -46,6 +48,10 @@ lint.ignore = [
 "tests/*" = ["D", "UP"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/open-canvas", "src/reflection"]
+
 
 
 [build-system]
